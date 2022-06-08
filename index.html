@@ -20,18 +20,35 @@
     <title>Студия</title>
   </head>
   <body>
-    <!--Header Основная навигация страницы-->
 
-    <!-- <header class="header">
+    <!-- Header Основная навигация страницы -->
+
+     <header class="header">
       <div class="container header-container">
+        
         <nav class="header-nav">
           <a class="link header__logo" href="index.html">
             <p class="logo">
               <span class="logo__web">Web</span
-              ><span class="logo__studio logo__studio--dark">Studio</span>
+              ><span class="logo__studio--dark">Studio</span>
             </p>
           </a>
-          <ul class="header-site-nav-list list-decor">
+
+          <button type="button" class="header-mobile-menu-btn is-open" 
+          aria-expanded="false" data-menu-button>
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+              <use class="header-icon-close-menu" href="./images/Sprite.svg#icon-close-menu" ></use>
+              <use class="header-icon-menu" href="./images/Sprite.svg#icon-menu" ></use>
+              <use></use>
+            </svg>
+          </button>
+
+          <div class="header-menu">
+            
+          </div>
+          <!-- Перенести зыкрытие NAV !!!! -->
+        
+          <!-- <ul class="header-site-nav-list list-decor">
             <li class="header-site-nav__item">
               <a
                 class="header-site-nav__link--link-current link header-site-nav__link"
@@ -66,9 +83,9 @@
               +38 096 111 11 11</a
             >
           </li>
-        </ul>
+        </ul> -->
       </div>
-    </header> -->
+    </header>
 
     <main>
       <!--HERO Главная секция-->
@@ -468,7 +485,7 @@
           <p class="logo">
             <a class="link" href="index.html">
               <span class="logo__web">Web</span
-              ><span class="logo__studio logo__studio--sweet">Studio</span>
+              ><span class="logo__studio--sweet">Studio</span>
             </a>
           </p>
 
@@ -532,6 +549,7 @@
     </footer> -->
 
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
 
