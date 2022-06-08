@@ -1,0 +1,69 @@
+/* Наши приоритеты */
+
+.approach-list {
+    // display: flex;
+    // justify-content: space-between;
+    
+}
+
+.approach__title {
+
+    @include device-type (mobile-only) {
+    text-align: center;
+    }
+
+    color: #212121;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.15;
+    text-transform: uppercase;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    letter-spacing: 0.03em;
+
+    
+    
+}
+
+.approach__item {
+
+    // width: 270px;
+
+    @include device-type (mobile-only) {
+        width: 100%;
+    }
+
+    @include device-type (mobile-only) {
+        margin-bottom: 30px;
+    }
+
+    
+    
+}
+
+.approach__icon-box {
+    display: flex;
+    width: 100%;
+    height: 120px;
+    background-color: var(--secondary-bgc);
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.approach__icon {
+    // display: block;
+
+    width: 70px;
+    height: 70px;
+
+}
+
+.approach__text {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}

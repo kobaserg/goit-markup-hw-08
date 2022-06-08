@@ -1,0 +1,51 @@
+/* Кастомный чекбокс */
+
+.hero-modal-mailing {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.73;
+    letter-spacing: 0.03em;
+
+    color: #757575;
+
+    margin-top: 20px;
+}
+
+.hero-modal-mailing__custom-checkbox {
+    display: flex;
+    width: 16px;
+    height: 15px;
+    align-items: center;
+    justify-content: center;
+
+    outline: 2px solid var(--header-cl);
+    outline-offset: -2px;
+    border-radius: 2px;
+
+    margin-right: 7px;
+
+    transition: background-color 250ms ease-in;
+
+}
+
+.hero-modal-mailing__custom-checkbox-icon {
+    opacity: 0;
+    fill: var(--card-cl);
+    transition: opacity 250ms ease-in;
+    width: 11px;
+    height: 8px;
+
+    .hero-modal-mailing__checkbox:checked+.hero-modal-mailing__custom-checkbox & {
+    opacity: 1;
+    fill: var(--card-cl);
+
+}
+
+}
+
+/* Замещение чекбокса встроенного кастомным */
+
