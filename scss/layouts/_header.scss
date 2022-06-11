@@ -1,6 +1,7 @@
 /* Header */
 
-.header {
+.header { 
+    position: relative;
     border-bottom: 1px solid #ECECEC;
     margin-left: auto;
     margin-right: auto;
@@ -8,45 +9,78 @@
 }
 
 .header-container {
-    position: relative;
-    display: flex;
-
+   
+    display: inline-block;
+   
     @include device-type (mobile-only) {
         height: 60px;
     }
     height: 80px;
 }
 
+.header-nav {
+
+    display: flex;
+    
+    
+}
+
 .header-mobile-menu-btn {
-    position: absolute;
-    right: 15px;
     @include device-type (tablet) {
         display: none;
     }
+
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    
     display: flex;
     margin: 0;
     padding: 0;
     align-items: center;
     justify-content: center;
     
-    width: 40px;
-    height: 40px;
+    
     border: none;
-    background-color: transparent;
+    background-color: transparent;   
+
+    &.is-open {
+        position: fixed;
+        z-index: 200;
+        // top: 10px;
+        // right: 15px;
+        // margin: 0;
+        // padding: 0;
+        // align-items: center;
+        // justify-content: center;
+    
+        
+        // border: none;
+        // background-color: transparent;
+     
+    }
+    
+
+    & .header-icon-menu {
+        display: block;
+    
+    }
 
     & .header-icon-close-menu {
-    display: none;
+        display: none;
+    }
 
-}
-
-    &.is-open .header-icon-close-menu {
-    display: block;
-}
 
     &.is-open .header-icon-menu {
     display: none;
-}
+    }
 
+    &.is-open .header-icon-close-menu {
+        display: block;
+        opacity: 1;
+        
+    }
+      
 &:hover .header-icon-close-menu,
 &:focus .header-icon-close-menu {
     cursor: pointer;
@@ -61,96 +95,200 @@
 
 }
 
+
 .header-menu {
-
-}
-
-.header-nav {
     
     @include device-type (mobile-only) {
-    display: flex;
-    align-items: center;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 40px;
+    background-color: #ffffff;
+
+    transform: translateX(100%);
+    transition: transform 100000ms ease-in-out;
     
+    
+
+    &.is-open {
+        display: flex;
+        transform: translateX(0);
+        transition: transform 100000ms ease-in-out;
+
     }
-    display: flex;
-    align-items: center;
+    
+    &.is-open .header-icon-close-menu {
+            display: block;
+            opacity: 1;
+            position: fixed;
+            top: 0;
+            right: 15px;
+    }
+
 }
 
+
+    @include device-type (tablet) {
+        
+        display: flex;
+        width: 100%;
+        align-items: center;
+        margin-left: 88px; 
+        justify-content: space-between;
+    }
+
+    @include device-type (desktop) {
+        width: 100%;
+        margin-left: 93px;
+        
+    }
+    
+
+
+}
+
+.header-nav-menu {
+    @include device-type (mobile-only) {
+        margin-bottom: auto;
+    }
+
+    @include device-type (tablet) {
+    display: flex;
+    margin-left: 60px;
+   
+    }
+    
+
+}
+
+
+.header-contact {
+    @include device-type (mobile-only) {
+        display: flex;
+        flex-direction: column-reverse;
+        aline-items: flex-start;
+
+    font-weight: 500;
+    
+    letter-spacing: 0.02em;
+    }
+
+    @include device-type (tablet-only) {
+        display: flex;
+        flex-direction: column;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.02em;
+    
+    }
+
+    @include device-type (desktop) {
+        display: flex;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.15;
+        letter-spacing: 0.02em;
+    }
+    
+    
+    
+
+}
 .header__logo {
-    // padding-top: 24px;
     display: block;
-    align-items: center;
-    justify-content: center;
+    // align-items: center;
+    // justify-content: center;
+    @include device-type (tablet) {
+    padding-top: 26px;
+    
+    }
+
+    @include device-type (mobile-only) {
+        padding-top: 17px;
+    }
+    
 }
 
 
 .header-site-nav-list {
-    // display: flex;
-    // margin-left: 93px;
-    // align-items: center;
+
+    @include device-type (mobile-only) {
+        margin-bottom: auto;
+    }
+
+    @include device-type (tablet) {
+    display: flex;
+    margin-right: auto;
+    }
+    
 }
 
 .header-site-nav__link {
-    // display: block;
-    // padding-top: 32px;
-    // padding-bottom: 32px;
+    @include device-type (tablet) {
+    display: block;
+    padding-top: 31px;
+    padding-bottom: 31px;
+    }
+    
 }
 
-.header-site-nav__item {
-    // margin-right: 50px;
+.header-site-nav__item:not(:last-child) {
+    @include device-type (mobile-only) {
+        margin-bottom: 32px;
+    }
+
+    margin-right: 50px;
 }
 
-.header-site-nav__item:last-child {
-    // margin-right: 0;
-}
 
 .header-site-nav__link {
+
+    @include device-type (mobile-only) {
+    font-size: 40px;
+    line-height: 1.17;
+    }
     // position: relative;
-    // color: var(--header-cl);
-    // font-weight: 500;
+    color: var(--header-cl);
+    font-weight: 500;
     // font-size: 14px;
     // line-height: 1.15;
-    // transition-property: color;
-    // transition-duration: 250ms;
-    // transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4,0,0.2,1);
+
+    &:hover,
+    &:focus {
+    color: var(--accent-color);
 
 }
 
 
-.header-site-nav__link:hover {
-    // color: var(--accent-color);
-
-}
-
-.header-site-nav__link:focus {
-    // color: var(--accent-color);
 }
 
 .header-site-nav__link--link-current {
-    // color: var(--accent-color);
+    color: var(--accent-color);
 }
 
-.header-site-nav__link--link-current::after {
+.header-site-nav__link--link-current .header-site-nav__item::after {
     content: "";
-    // display: block;
-    // position: absolute;
-    // left: 0;
-    // bottom: 0;
-    // width: 100%;
-    // height: 4px;
-    // background-color: var(--accent-color)
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: var(--accent-color)
 }
 
-.header-contact {
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // margin-left: auto;
-    // font-weight: 500;
-    // font-size: 14px;
-    // line-height: 1.15;
 
-}
 
 .header-contact__list {
     // display: block;
@@ -159,7 +297,13 @@
     // justify-content: center;
 }
 
-.header-contact__link {
+.header-contact__link-email {
+    @include device-type (mobile-only) {
+        font-size: 24px;
+        line-height: 1.17;
+        color: var(--main-text-cl);
+    //    margin-top: 32px;
+        }
     // display: flex;
     // align-items: center;
     // justify-content: center;
@@ -173,7 +317,67 @@
 
 }
 
+.header-contact__link-tel {
+    @include device-type (mobile-only) {
+    font-size: 34px;
+    line-height: 1.18;
+    color: var(--accent-color);
+    margin-bottom: 32px;
+    }
+    
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    // color: var(--main-text-cl);
+    // transition-property: color;
+    // transition-duration: 250ms;
+    // transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    // padding-top: 32px;
+    // padding-bottom: 32px;
+
+}
+
+.header-social {
+    @include device-type (mobile-only) {
+        display: flex;
+        margin-top: 64px;
+    }
+    
+}
+
+.header-social__link {
+    @include device-type (tablet) {
+        display: none;
+    }
+
+    @include device-type (mobile-only) {
+        margin-right: 10px;
+        color: var(--accent-color);
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.22;
+        
+        letter-spacing: 0.02em;
+
+
+        &::after {
+            content: " ";
+            background-image: url(../../images/Sprite.svg#icon-line);
+            color: rgba(33, 33, 33, 0.2);
+            
+            margin-right: 10px;
+         
+        }
+    }
+
+}
+
 .header-contact--position {
+    @include device-type (mobile-only) {
+        margin-top: 32px;
+
+    }
     // margin-right: 50px;
 }
 
