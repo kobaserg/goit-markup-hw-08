@@ -1,11 +1,11 @@
 /* Чем мы занимаемся */
 
-.projects {
-    @media screen and (max-width: 767px) {
+.directions {
+    @media screen and (max-width: 1199px) {
         display: none;
     }
 }
-.projects-title {
+.directions-title {
 
     color: #212121;
     font-weight: 700;
@@ -18,16 +18,16 @@
 
 }
 
-.projects-section--top {
+.directions-section--top {
     margin-top: -94px;
 }
 
-.projects__box {
+.directions__box {
     display: flex;
     flex-basis: calc((100% - 60px) / 3);
 }
 
-.projects__img {
+.directions__img {
     position: relative;
 
     display: block;
@@ -35,11 +35,11 @@
 
 }
 
-.projects__img:last-child {
+.directions__img:last-child {
     margin-right: 0;
 }
 
-.project__text {
+.directions__text {
     position: absolute;
     display: flex;
     align-items: center;

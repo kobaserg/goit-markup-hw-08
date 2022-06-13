@@ -1,12 +1,30 @@
 /*  HERO */
 
 .hero {
-    background-color: #C4C4C4;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-     rgba(47, 48, 58, 0.4)), url(../images/hero-fon.jpg);
-
+    @include device-type (mobile-only) {
+    max-height: 400px;
+    max-width: 100%;
+    padding-top: 118px;
+    padding-bottom: 198px;
+    }
+    @include device-type (tablet-only) {
+    max-height: 400px;
+    max-width: 100%;
+    padding-top: 118px;
+    padding-bottom: 198px;
+    }
+    @include device-type (desktop) {
     max-height: 600px;
-    max-width: 1600px;
+    max-width: 100%;
+    padding-top: 200px;
+    padding-bottom: 280px;
+    }
+
+    background-color: #C4C4C4;
+    // background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+    //  rgba(47, 48, 58, 0.4)), url(../images/hero-fon.jpg);
+
+    
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -21,17 +39,32 @@
 
 .hero__title {
 
-    color: #FFFFFF;
-    font-weight: 900;
+    @include device-type (mobile-only) {
+    font-size: 26px;
+    line-height: 1.62;
+    width: 360px;
+    }
+    @include device-type (tablet-only) {
+    font-size: 26px;
+    line-height: 1.62;
+    width: 360px;
+    }
+    @include device-type (desktop) {
     line-height: 1.36;
     font-size: 44px;
+    width: 696px;
+    }
+
+    color: #FFFFFF;
+    font-weight: 900;
+    
     letter-spacing: 0.06em;
     text-transform: uppercase;
 
     margin-left: auto;
     margin-right: auto;
-    width: 696px;
+    
     text-align: center;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 
 }

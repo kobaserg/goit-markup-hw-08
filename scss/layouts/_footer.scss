@@ -1,5 +1,6 @@
 /* Футер */
 .footer {
+    align-items: baseline;
     background-color: #2F303A;
     padding-top: 60px;
     padding-bottom: 60px;
@@ -7,16 +8,59 @@
 }
 
 .footer-box {
-    display: flex;
-    align-items: baseline;
+     @include device-type (mobile-only) {
+        display: flex;
+        flex-direction: column;
+        
+    
+        text-align: center;
+    }
 
+    @include device-type (tablet-only) {
+        
+    }
+    @include device-type (desktop) {
+    display: flex;
+    align-items: flex-start;
+    
+    }
+}
+
+.footer-box-position {
+    @include device-type (tablet-only) {
+        display: flex;
+        margin-left: 61px;
+    }
+    @include device-type (desktop) {
+        display: flex;
+    }
+}
+
+.footer__logo {
+    display: block;
+    margin-bottom: 20px;
+    @include device-type (tablet-only) {
+        margin-left: 39px;
+    }
+    
 }
 
 .footer-сontact {
-    margin-top: 20px;
+    // margin-top: 20px;
+    @include device-type (mobile-only) {
+        
+    }
+}
+
+.footer--position {
+    @include device-type (tablet-only) {
+        margin-right: 165px;
+        margin-bottom: 60px;
+    }
 }
 
 .footer-contact__link {
+    
     color: rgba(255, 255, 255, 0.6);
     font-size: 14px;
     line-height: 1.7;
@@ -33,8 +77,19 @@
 }
 
 .footer__email--position {
+    @include device-type (mobile-only) {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    }
+
+    @include device-type (tablet-only) {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    }
+    @include device-type (desktop) {
     margin-top: 9px;
     margin-bottom: 9px;
+    }
 }
 
 .footer__address a {
@@ -43,13 +98,23 @@
 
 
 .footer-join {
+    @include device-type (desktop) {
     margin-left: 70px;
+    }
+
+    @include device-type (mobile-only) {
+
+        margin-top: 60px;
+        margin-bottom: 60px;
+        
+    
+}
 }
 
 .footer-join__title {
     font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
 
@@ -63,6 +128,8 @@
     width: 206px;
     height: 44px;
     justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
 
 }
 
@@ -99,14 +166,21 @@
 }
 
 .footer-mailing {
-
-    width: 570px;
-    height: 86px;
+    @include device-type (desktop) {
 
     margin-left: auto;
+    }
+
+    @include device-type (tablet-only) {
+
+    }
+    
 }
 
 .footer-mailing__title {
+    @include device-type (tablet-only) {
+        text-align: center;
+    }
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;
@@ -115,16 +189,38 @@
 
     color: var(--card-cl);
 
-    padding-bottom: 20px;
+    margin-bottom: 20px;
+
 }
 
 .footer-mailing__input {
 
     display: flex;
+    @include device-type (mobile-only) {
+        flex-direction: column;
+    }
+
+    @include device-type (tablet-only) {
+        flex-direction: column;
+        text-align: center;
+    }
 
 }
 
 .footer-mailing__email {
+    @include device-type (mobile-only) {
+        width: 450px;
+        margin-bottom: 20px;
+    }
+
+    @include device-type (tablet-only) {
+        width: 450px;
+        margin-bottom: 20px;
+    }
+
+    @include device-type (desktop) {
+        margin-right: 12px;
+    }
     width: 358px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -139,12 +235,21 @@
 
     color: rgba(255, 255, 255, 0.6);
 
-    margin-right: 12px;
+    
     padding-left: 16px;
 
 }
 
 .footer-mailing-btn {
+    @include device-type (mobile-only) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include device-type (tablet-only) {
+        margin-left: auto;
+        margin-right: auto;
+    }
     width: 200px;
     height: 50px;
     background-color: var(--accent-color);

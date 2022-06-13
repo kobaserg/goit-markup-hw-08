@@ -16,109 +16,98 @@
     />
     <link rel="stylesheet" href="./css/main.min.css" />
     <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
-    
+
     <title>Студия</title>
   </head>
   <body>
-
     <!-- Header Основная навигация страницы -->
 
-     <header class="header">
+    <header class="header">
       <div class="container header-container">
-        
         <nav class="header-nav">
           <a class="link header__logo" href="index.html">
             <p class="logo">
-              <span class="logo__web">Web</span
-              ><span class="logo__studio--dark">Studio</span>
+              <span class="logo__web">Web</span><span class="logo__studio--dark">Studio</span>
             </p>
           </a>
 
-          <button type="button" class="header-mobile-menu-btn " 
-          aria-expanded="false" data-menu-button>
-            <svg width="40" height="40" 
-            aria-label="Переключатель мобильного меню"
-            aria-controls="header-menu">
-              <use class="header-icon-close-menu" href="./images/Sprite.svg#icon-close-menu" ></use>
-              <use class="header-icon-menu" href="./images/Sprite.svg#icon-menu" ></use>
-
-              
-            </svg> 
+          <button
+            type="button"
+            class="header-mobile-menu-btn"
+            aria-expanded="false"
+            data-menu-button
+          >
+            <svg
+              width="40"
+              height="40"
+              aria-label="Переключатель мобильного меню"
+              aria-controls="header-menu"
+            >
+              <use class="header-icon-close-menu" href="./images/Sprite.svg#icon-close-menu"></use>
+              <use class="header-icon-menu" href="./images/Sprite.svg#icon-menu"></use>
+            </svg>
           </button>
 
-          <div class="header-menu  id="header-menu" data-menu>
-
-        
+          <div class="header-menu" id="header-menu" data-menu>
+            
             <ul class="header-site-nav-list list-decor">
-            <li class="header-site-nav__item">
-              <a
-                class="header-site-nav__link--link-current link header-site-nav__link"
-                href="./index.html"
-                >Студия</a
-              >
-            </li>
-            <li class="header-site-nav__item">
-              <a class="link header-site-nav__link" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="header-site-nav__item">
-              <a class="link header-site-nav__link" href="">Контакты</a>
-            </li>
-          </ul>
-      
-          
-
-           
-             <ul class="header-contact list-decor ">
-
-            <li class="header-social" >
-              <a class="link header-social__link" href="">Instagram</a>
-              <a class="link header-social__link" href="">Twitter</a>
-              <a class="link header-social__link" href="">Facebook</a>
-              <a class="link header-social__link" href="">LinkedIn</a>
-            </li>
-
-            <li class="header-contact__list header-contact--position">
-              <a class="link header-contact__link-email" href="">
-              <!-- <svg class="header-contact__icon-email">
-                <use href="./images/Sprite.svg#icon-envelope"></use>
-              </svg> -->
-              info@devstudio.com</a>
-            </li>
-
-            <li class="header-contact__list">
-             <a class="link header-contact__link-tel" href="">
-              <!-- <svg class="header-contact__icon-tel">
-                <use href="./images/Sprite.svg#icon-smartphone"></use>
-              </svg> -->
-              +38 096 111 11 11</a
-            >
-            </li>
-            
+              <li class="header-site-nav__item">
+                <a
+                  class="header-site-nav__link--link-current link header-site-nav__link"
+                  href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="header-site-nav__item">
+                <a class="link header-site-nav__link" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="header-site-nav__item">
+                <a class="link header-site-nav__link" href="">Контакты</a>
+              </li>
             </ul>
-            
-         
 
-          
+            <ul class="header-contact list-decor">
+              <li class="header-social">
+                <a class="link header-social__link" href="">Instagram</a>
+                <a class="link header-social__link" href="">Twitter</a>
+                <a class="link header-social__link" href="">Facebook</a>
+                <a class="link header-social__link" href="">LinkedIn</a>
+              </li>
+
+              <li class="header-contact__list header-contact--position">
+                <a class="link header-contact__link-email" href="">
+                  <svg class="header-contact__icon-email">
+                    <use href="./images/Sprite.svg#icon-envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+
+              <li class="header-contact__list">
+                <a class="link header-contact__link-tel" href="">
+                  <svg class="header-contact__icon-tel">
+                    <use href="./images/Sprite.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
           </div>
-
-
         </nav>
-
-        
       </div>
     </header>
 
     <main>
       <!--HERO Главная секция-->
 
-      <!-- <div class="hero">
+      <div class="hero">
         <h1 class="hero__title">ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
 
         <button class="hero-button-service" type="button" data-modal-open>Заказать услугу</button>
 
-        <!-- Модальное окно заказть услугу -->
+       
 
-        <!-- <div class="hero-modal-backdrop is-hidden" data-modal>
+        <div class="hero-modal-backdrop is-hidden" data-modal>
           <div class="hero-modal">
             <button class="hero-modal-close--position" data-modal-close>
               <svg class="hero-modal__close-icon">
@@ -174,7 +163,7 @@
                     <use href="./images/Sprite.svg#icon-vector"></use>
                   </svg>
                 </span>
-                Соглашаюсь с рассылкой и принимаю
+                <span class="hero-modal-mailing-text">Соглашаюсь с рассылкой и принимаю</span> 
                 <a class="hero-modal-mailing__terms" href="">Условия договора</a>
               </label>
 
@@ -182,7 +171,7 @@
             </form>
           </div>
         </div>
-      </div> --> 
+      </div> 
 
       <!-- Наши приоритеты-->
       <section class="section">
@@ -238,35 +227,35 @@
       </section>
 
       <!-- Чем мы занимаемся-->
-      <!-- <div class="projects">
-         <section class="section projects-section--top">
+      <div class="directions">
+         <section class="section directions-section--top">
         <div class="container">
-          <h2 class="projects-title">Чем мы занимаемся</h2>
+          <h2 class="directions-title">Чем мы занимаемся</h2>
 
-          <ul class="list-decor projects__box">
-            <li class="projects__img">
+          <ul class="list-decor directions__box">
+            <li class="directions__img">
               <img class="image" src="./images/what-we-do/desktop.jpg" alt="Разработка" />
-              <h2 class="project__text">Десктопные Приложения</h2>
+              <h2 class="directions__text">Десктопные Приложения</h2>
             </li>
-            <li class="projects__img">
+            <li class="directions__img">
               <img
                 class="image"
                 src="./images/what-we-do/phone.jpg"
                 alt="Для мобильных телефонов"
               />
-              <h2 class="project__text">Мобильные Приложения</h2>
+              <h2 class="directions__text">Мобильные Приложения</h2>
             </li>
-            <li class="projects__img">
+            <li class="directions__img">
               <img class="image" src="./images/what-we-do/design.jpg" alt="Для планшетов" />
-              <h2 class="project__text">Дизайнерские решения</h2>
+              <h2 class="directions__text">Дизайнерские решения</h2>
             </li>
           </ul>
         </div>
       </section>
-      </div> -->
-     
+      </div>
 
-      <!-- Наша команда
+      <!-- Наша команда -->
+      
       <section class="team section">
         <div class="container">
           <h2 class="team__title">Наша команда</h2>
@@ -452,7 +441,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!--Постоянные клиенты-->
 
@@ -500,59 +489,60 @@
 
     <!-- Наши контакты-->
 
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer-box">
-        <div>
-          <p class="logo">
-            <a class="link" href="index.html">
-              <span class="logo__web">Web</span
-              ><span class="logo__studio--sweet">Studio</span>
-            </a>
-          </p>
-
-          <address class="footer-сontact footer--position">
-            <p class="footer__address">
-              <a class="link footer-contact__link" href="">г. Киев, пр-т Леси Украинки, 26</a>
+        <div class="footer-box-position">
+          <div >
+            <p class="logo footer__logo">
+              <a class="link" href="index.html">
+                <span class="logo__web">Web</span><span class="logo__studio--sweet">Studio</span>
+              </a>
             </p>
-            <p class="footer__email--position">
-              <a class="link footer-contact__link" href="">info@example.com</a>
-            </p>
-            <p><a class="link footer-contact__link" href="">+38 099 111 11 11</a></p>
-          </address>
-        </div>
 
-        <div class="footer-join">
-          <h3 class="footer-join__title">Присоединяйтесь</h3>
-          <ul class="list-decor footer-join-icon-list">
-            <li>
-              <a class="footer-join-icon-link" href="">
-                <svg class="footer-join__icon">
-                  <use href="./images/Sprite.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="footer-join-icon-link" href="">
-                <svg class="footer-join__icon">
-                  <use href="./images/Sprite.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="footer-join-icon-link" href="">
-                <svg class="footer-join__icon">
-                  <use href="./images/Sprite.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a class="footer-join-icon-link" href="">
-                <svg class="footer-join__icon">
-                  <use href="./images/Sprite.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+            <address class="footer-сontact footer--position">
+              <p class="footer__address">
+                <a class="link footer-contact__link" href="">г. Киев, пр-т Леси Украинки, 26</a>
+              </p>
+              <p class="footer__email--position">
+                <a class="link footer-contact__link" href="">info@example.com</a>
+              </p>
+              <p><a class="link footer-contact__link" href="">+38 099 111 11 11</a></p>
+            </address>
+          </div>
+
+          <div class="footer-join">
+            <h3 class="footer-join__title">Присоединяйтесь</h3>
+            <ul class="list-decor footer-join-icon-list">
+              <li>
+                <a class="footer-join-icon-link" href="">
+                  <svg class="footer-join__icon">
+                    <use href="./images/Sprite.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="footer-join-icon-link" href="">
+                  <svg class="footer-join__icon">
+                    <use href="./images/Sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="footer-join-icon-link" href="">
+                  <svg class="footer-join__icon">
+                    <use href="./images/Sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="footer-join-icon-link" href="">
+                  <svg class="footer-join__icon">
+                    <use href="./images/Sprite.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div class="footer-mailing">
@@ -567,10 +557,9 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
   </body>
 </html>
-
