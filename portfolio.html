@@ -14,8 +14,8 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/main.min.css">
-    
+    <link rel="stylesheet" href="./css/main.min.css" />
+
     <title>Портфолио</title>
   </head>
   <body>
@@ -37,6 +37,7 @@
             data-menu-button
           >
             <svg
+              class="header-mobile-btn-icon"
               width="40"
               height="40"
               aria-label="Переключатель мобильного меню"
@@ -50,14 +51,14 @@
           <div class="header-menu" id="header-menu" data-menu>
             <ul class="header-site-nav-list list-decor">
               <li class="header-site-nav__item">
-                <a
-                  class=" link header-site-nav__link"
-                  href="./index.html"
-                  >Студия</a
-                >
+                <a class="link header-site-nav__link" href="./index.html">Студия</a>
               </li>
               <li class="header-site-nav__item">
-                <a class="header-site-nav__link--link-current link header-site-nav__link" href="./portfolio.html">Портфолио</a>
+                <a
+                  class="header-site-nav__link--link-current link header-site-nav__link"
+                  href="./portfolio.html"
+                  >Портфолио</a
+                >
               </li>
               <li class="header-site-nav__item">
                 <a class="link header-site-nav__link" href="">Контакты</a>
@@ -125,15 +126,47 @@
             <li class="project-card">
               <div class="project-card__item">
                 <p class="project-card__overlay">
-                  Ресурс предлагает комплексные предложения с разным 
-                  уровнем функционала и сервисов.
-                  Все это позволит посетителю получить 
-                  исчерпывающие сведения о компании или частном
+                  Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
+                  Все это позволит посетителю получить исчерпывающие сведения о компании или частном
                   лице.
                 </p>
-                <img class="image" 
-                src="./images/portfolio/web/web1.jpg" 
-                alt="Технокряк" />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/portfolio/web/web1-d.jpg    1x,
+                      ./images/portfolio/web/web1-d@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio/web/web1-t.jpg    1x,
+                      ./images/portfolio/web/web1-t@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width: 479px)"
+                    srcset="
+                      ./images/portfolio/web/web1-m.jpg    1x,
+                      ./images/portfolio/web/web1-m@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    class="image"
+                    srcset="
+                      ./images/portfolio/web/web1-m.jpg    1x,
+                      ./images/portfolio/web/web1-m@2x.jpg 2x
+                    "
+                    src="./images/portfolio/web/web1-m.jpg"
+                    alt="Технокряк"
+                    width="450"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
 
               <div class="project-card__title">
@@ -145,17 +178,47 @@
             <li class="project-card">
               <div class="project-card__item">
                 <p class="project-card__overlay">
-                  Ресурс предлагает комплексные предложения с 
-                  разным уровнем функционала и сервисов.
-                  Все это позволит посетителю получить 
-                  исчерпывающие сведения о компании или частном
+                  Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
+                  Все это позволит посетителю получить исчерпывающие сведения о компании или частном
                   лице.
                 </p>
-                <img
-                  class="image"
-                  src="./images/portfolio/designe/designe1.jpg"
-                  alt="Постер New Orlean vs Golden Star"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/portfolio/designe/designe1-d.jpg    1x,
+                      ./images/portfolio/designe/designe1-d@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio/designe/designe1-t.jpg    1x,
+                      ./images/portfolio/designe/designe1-t@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width: 479px)"
+                    srcset="
+                      ./images/portfolio/designe/designe1-m.jpg    1x,
+                      ./images/portfolio/designe/designe1-m@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    class="image"
+                    srcset="
+                      ./images/portfolio/designe/designe1-m.jpg    1x,
+                      ./images/portfolio/designe/designe1-m@2x.jpg 2x
+                    "
+                    src="./images/portfolio/designe/designe1-m.jpg"
+                    alt="Постер New Orlean vs Golden Star"
+                    width="450"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
 
               <div class="project-card__title">
@@ -167,17 +230,47 @@
             <li class="project-card">
               <div class="project-card__item">
                 <p class="project-card__overlay">
-                  Ресурс предлагает комплексные предложения с 
-                  разным уровнем функционала и сервисов.
-                  Все это позволит посетителю получить 
-                  исчерпывающие сведения о компании или частном
+                  Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
+                  Все это позволит посетителю получить исчерпывающие сведения о компании или частном
                   лице.
                 </p>
-                <img
-                  class="image"
-                  src="./images/portfolio/application/application1.jpg"
-                  alt="Ресторан Seafood"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/portfolio/application/application1-d.jpg    1x,
+                      ./images/portfolio/application/application1-d@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio/application/application1-t.jpg    1x,
+                      ./images/portfolio/application/application1-t@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width: 479px)"
+                    srcset="
+                      ./images/portfolio/application/application1-m.jpg    1x,
+                      ./images/portfolio/application/application1-m@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    class="image"
+                    srcset="
+                      ./images/portfolio/application/application1-m.jpg    1x,
+                      ./images/portfolio/application/application1-m@2x.jpg 2x
+                    "
+                    src="./images/portfolio/application/application1-m.jpg"
+                    alt="Ресторан Seafood"
+                    width="450"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
 
               <div class="project-card__title">
@@ -189,17 +282,47 @@
             <li class="project-card">
               <div class="project-card__item">
                 <p class="project-card__overlay">
-                  Ресурс предлагает комплексные предложения с 
-                  разным уровнем функционала и сервисов.
-                  Все это позволит посетителю получить 
-                  исчерпывающие сведения о компании или частном
+                  Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
+                  Все это позволит посетителю получить исчерпывающие сведения о компании или частном
                   лице.
                 </p>
-                <img
-                  class="image"
-                  src="./images/portfolio/marketing/marketing1.jpg"
-                  alt="Проект Prime"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/portfolio/marketing/marketing1-d.jpg    1x,
+                      ./images/portfolio/marketing/marketing1-d@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio/marketing/marketing1-t.jpg    1x,
+                      ./images/portfolio/marketing/marketing1-t@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width: 479px)"
+                    srcset="
+                      ./images/portfolio/marketing/marketing1-m.jpg    1x,
+                      ./images/portfolio/marketing/marketing1-m@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    class="image"
+                    srcset="
+                      ./images/portfolio/marketing/marketing1-m.jpg    1x,
+                      ./images/portfolio/marketing/marketing1-m@2x.jpg 2x
+                    "
+                    src="./images/portfolio/marketing/marketing1-m.jpg"
+                    alt="Проект Prime"
+                    width="450"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
 
               <div class="project-card__title">
@@ -211,17 +334,47 @@
             <li class="project-card">
               <div class="project-card__item">
                 <p class="project-card__overlay">
-                  Ресурс предлагает комплексные предложения с 
-                  разным уровнем функционала и сервисов.
-                  Все это позволит посетителю получить 
-                  исчерпывающие сведения о компании или частном
+                  Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
+                  Все это позволит посетителю получить исчерпывающие сведения о компании или частном
                   лице.
                 </p>
-                <img
-                  class="image"
-                  src="./images/portfolio/application/application2.jpg"
-                  alt="Проект Boxes"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/portfolio/application/application2-d.jpg    1x,
+                      ./images/portfolio/application/application2-d@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio/application/application2-t.jpg    1x,
+                      ./images/portfolio/application/application2-t@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width: 479px)"
+                    srcset="
+                      ./images/portfolio/application/application2-m.jpg    1x,
+                      ./images/portfolio/application/application2-m@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    class="image"
+                    srcset="
+                      ./images/portfolio/application/application2-m.jpg    1x,
+                      ./images/portfolio/application/application2-m@2x.jpg 2x
+                    "
+                    src="./images/portfolio/application/application2-m.jpg"
+                    alt="Проект Boxes"
+                    width="450"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
 
               <div class="project-card__title">
@@ -233,17 +386,47 @@
             <li class="project-card">
               <div class="project-card__item">
                 <p class="project-card__overlay">
-                  Ресурс предлагает комплексные предложения с 
-                  разным уровнем функционала и сервисов.
-                  Все это позволит посетителю получить 
-                  исчерпывающие сведения о компании или частном
+                  Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
+                  Все это позволит посетителю получить исчерпывающие сведения о компании или частном
                   лице.
                 </p>
-                <img
-                  class="image"
-                  src="./images/portfolio/web/web2.jpg"
-                  alt="Inspiration has no Borders"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/portfolio/web/web2-d.jpg    1x,
+                      ./images/portfolio/web/web2-d@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio/web/web2-t.jpg    1x,
+                      ./images/portfolio/web/web2-t@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width: 479px)"
+                    srcset="
+                      ./images/portfolio/web/web2-m.jpg    1x,
+                      ./images/portfolio/web/web2-m@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    class="image"
+                    srcset="
+                      ./images/portfolio/web/web2-m.jpg    1x,
+                      ./images/portfolio/web/web2-m@2x.jpg 2x
+                    "
+                    src="./images/portfolio/web/web2-m.jpg"
+                    alt="Inspiration has no Borders"
+                    width="450"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
 
               <div class="project-card__title">
@@ -255,17 +438,47 @@
             <li class="project-card">
               <div class="project-card__item">
                 <p class="project-card__overlay">
-                  Ресурс предлагает комплексные предложения с 
-                  разным уровнем функционала и сервисов.
-                  Все это позволит посетителю получить 
-                  исчерпывающие сведения о компании или частном
+                  Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
+                  Все это позволит посетителю получить исчерпывающие сведения о компании или частном
                   лице.
                 </p>
-                <img
-                  class="image"
-                  src="./images/portfolio/designe/designe2.jpg"
-                  alt="Издание Limited Edition"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/portfolio/designe/designe2-d.jpg    1x,
+                      ./images/portfolio/designe/designe2-d@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio/designe/designe2-t.jpg    1x,
+                      ./images/portfolio/designe/designe2-t@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width: 479px)"
+                    srcset="
+                      ./images/portfolio/designe/designe2-m.jpg    1x,
+                      ./images/portfolio/designe/designe2-m@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    class="image"
+                    srcset="
+                      ./images/portfolio/designe/designe2-m.jpg    1x,
+                      ./images/portfolio/designe/designe2-m@2x.jpg 2x
+                    "
+                    src="./images/portfolio/designe/designe2-m.jpg"
+                    alt="Издание Limited Edition"
+                    width="450"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
 
               <div class="project-card__title">
@@ -277,17 +490,47 @@
             <li class="project-card">
               <div class="project-card__item">
                 <p class="project-card__overlay">
-                  Ресурс предлагает комплексные предложения с 
-                  разным уровнем функционала и сервисов.
-                  Все это позволит посетителю получить 
-                  исчерпывающие сведения о компании или частном
+                  Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
+                  Все это позволит посетителю получить исчерпывающие сведения о компании или частном
                   лице.
                 </p>
-                <img
-                  class="image"
-                  src="./images/portfolio/marketing/marketing2.jpg"
-                  alt="Проект LAB"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/portfolio/marketing/marketing2-d.jpg    1x,
+                      ./images/portfolio/marketing/marketing2-d@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio/marketing/marketing2-t.jpg    1x,
+                      ./images/portfolio/marketing/marketing2-t@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width: 479px)"
+                    srcset="
+                      ./images/portfolio/marketing/marketing2-m.jpg    1x,
+                      ./images/portfolio/marketing/marketing2-m@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    class="image"
+                    srcset="
+                      ./images/portfolio/marketing/marketing2-m.jpg    1x,
+                      ./images/portfolio/marketing/marketing2-m@2x.jpg 2x
+                    "
+                    src="./images/portfolio/marketing/marketing2-m.jpg"
+                    alt="Проект LAB"
+                    width="450"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
 
               <div class="project-card__title">
@@ -299,18 +542,47 @@
             <li class="project-card">
               <div class="project-card__item">
                 <p class="project-card__overlay">
-                  Ресурс предлагает комплексные предложения с 
-                  разным уровнем функционала и сервисов.
-                  Все это позволит посетителю получить 
-                  исчерпывающие сведения о компании или частном
+                  Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов.
+                  Все это позволит посетителю получить исчерпывающие сведения о компании или частном
                   лице.
                 </p>
-                <img
-                  class="image"
-                  src="./images/portfolio/application/application3.jpg"
-                  alt="Growing Business"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/portfolio/application/application3-d.jpg    1x,
+                      ./images/portfolio/application/application3-d@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/portfolio/application/application3-t.jpg    1x,
+                      ./images/portfolio/application/application3-t@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <source
+                    media="(max-width: 479px)"
+                    srcset="
+                      ./images/portfolio/application/application3-m.jpg    1x,
+                      ./images/portfolio/application/application3-m@2x.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    class="image"
+                    srcset="
+                      ./images/portfolio/application/application3-m.jpg    1x,
+                      ./images/portfolio/application/application3-m@2x.jpg 2x
+                    "
+                    src="./images/portfolio/application/application3-m.jpg"
+                    alt="Growing Business"
+                    width="450"
+                    loading="lazy"
+                  />
+                </picture>
               </div>
 
               <div class="project-card__title">
@@ -324,10 +596,10 @@
     </main>
     <!--Футер-->
 
-     <footer class="footer">
+    <footer class="footer">
       <div class="container footer-box">
         <div class="footer-box-position">
-          <div >
+          <div>
             <p class="logo footer__logo">
               <a class="link" href="index.html">
                 <span class="logo__web">Web</span><span class="logo__studio--sweet">Studio</span>
@@ -394,6 +666,6 @@
       </div>
     </footer>
 
-     <script src="./js/menu.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

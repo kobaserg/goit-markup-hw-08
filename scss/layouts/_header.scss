@@ -9,14 +9,11 @@
 
 .header-container {
    
-    // display: inline-block;
-   
     @include device-type (mobile-only) {
         height: 60px;
     }
     height: 80px;
-    // margin-left: auto;
-    // margin-right: auto;
+   
 }
 
 .header-nav {
@@ -72,17 +69,21 @@
         opacity: 1;
         
     }
-      
-&:hover .header-icon-close-menu,
-&:focus .header-icon-close-menu {
+    &:hover .header-mobile-btn-icon {
+        cursor: pointer;
+        color: var(--accent-color);
+    }
+    
+    &:hover .header-icon-close-menu,
+    &:focus .header-icon-close-menu {
     cursor: pointer;
-    fill: var(--accent-color);
+    fill: currentColor;
 }
 
-&:hover .header-icon-menu,
-&:focus .header-icon-menu {
+    &:hover .header-icon-menu,
+    &:focus .header-icon-menu {
     cursor: pointer;
-    fill: var(--accent-color);
+    fill: currentColor;
 }
 
 }
@@ -110,6 +111,7 @@
     &.is-open {
         display: flex;
         transform: translateX(0%);
+        z-index: 100;
         
 
     }

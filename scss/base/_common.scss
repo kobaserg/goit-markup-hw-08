@@ -9,6 +9,11 @@ body {
     
 }
 
+img {
+    display: block;
+    max-width: 100%; 
+    height: auto;
+}
 
 .image {
     display: block;
@@ -29,14 +34,27 @@ body {
 }
 
 .section {
+   
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
 
-    padding-top: 60px;
-    padding-bottom: 60px;
+    @include device-type (mobile-only) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @include device-type (mobile) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    @include device-type (tablet) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 
-@include device-type (desktop) {
+    @include device-type (desktop) {
     padding-top: 94px;
     padding-bottom: 94px;
-}
+    }
     
-
 }
