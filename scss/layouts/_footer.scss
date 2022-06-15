@@ -200,6 +200,7 @@
     display: flex;
     @include device-type (mobile-only) {
         flex-direction: column;
+        
     }
 
     @include device-type (tablet-only) {
@@ -213,6 +214,7 @@
     @include device-type (mobile-only) {
         min-width: 450px;
         margin-bottom: 20px;
+        
     }
 
     @include device-type (tablet-only) {

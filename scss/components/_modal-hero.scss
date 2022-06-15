@@ -21,6 +21,9 @@
 }
 
 .hero-modal {
+    @media screen  and (max-width: 479px) {
+        width: 92%;
+    }
     @include device-type (desktop) {
     width: 528px;
     height: 581px;
