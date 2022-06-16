@@ -711,11 +711,11 @@ h3 {
 
 /* Header */
 .header {
-  position: relative;
   border-bottom: 1px solid #ECECEC;
 }
 
 .header-container {
+  position: relative;
   height: 80px;
 }
 
@@ -825,6 +825,7 @@ h3 {
     display: flex;
     -webkit-transform: translateX(0);
             transform: translateX(0);
+    z-index: 90;
   }
   .header-menu.is-open .header-icon-close-menu {
     display: block;
@@ -917,6 +918,8 @@ h3 {
 .header-site-nav__link {
   color: var(--header-cl);
   font-weight: 500;
+  font-size: 14px;
+  line-height: 1.15;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 250ms;
@@ -947,6 +950,13 @@ h3 {
 .header-site-nav__link--link-current {
   color: var(--accent-color);
   border-bottom: 4px solid var(--accent-color);
+}
+
+@media screen and (max-width: 767.98px) {
+  .header-site-nav__link--link-current {
+    color: var(--accent-color);
+    border-bottom: 0px solid var(--accent-color);
+  }
 }
 
 @media screen and (max-width: 767.98px) {
@@ -1182,8 +1192,6 @@ h3 {
     max-height: 400px;
     min-width: 320px;
     max-width: 480px;
-    padding-top: 118px;
-    padding-bottom: 198px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/hero/hero-m.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero/hero-m.jpg);
   }
@@ -1201,8 +1209,6 @@ h3 {
     background-size: cover;
     max-height: 400px;
     max-width: 1200px;
-    padding-top: 118px;
-    padding-bottom: 198px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/hero/hero-t.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero/hero-t.jpg);
   }
@@ -1220,8 +1226,6 @@ h3 {
     background-size: cover;
     max-height: 600px;
     max-width: 1600px;
-    padding-top: 200px;
-    padding-bottom: 280px;
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../../images/hero/hero-d.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/hero/hero-d.jpg);
   }
@@ -1266,6 +1270,18 @@ h3 {
     line-height: 1.36;
     font-size: 44px;
     width: 696px;
+  }
+}
+
+.hero-position {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+@media screen and (max-width: 1199.98px) {
+  .hero-position {
+    padding-top: 118px;
+    padding-bottom: 118px;
   }
 }
 
@@ -1428,6 +1444,7 @@ h3 {
 /* Наша команда */
 .team {
   background-color: var(--secondary-bgc);
+  max-width: 1200px;
 }
 
 .team__title {
@@ -1690,6 +1707,12 @@ h3 {
 @media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .footer__logo {
     margin-left: 39px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .footer-сontact {
+    text-align: center;
   }
 }
 

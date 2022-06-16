@@ -1,14 +1,14 @@
 /* Header */
 
 .header { 
-    position: relative;
+   
     border-bottom: 1px solid #ECECEC;
     
 
 }
 
 .header-container {
-   
+    position: relative;
     @include device-type (mobile-only) {
         height: 60px;
     }
@@ -113,6 +113,7 @@
     &.is-open {
         display: flex;
         transform: translateX(0);
+        z-index: 90;
         
     }
     
@@ -211,8 +212,8 @@
     // position: relative;
     color: var(--header-cl);
     font-weight: 500;
-    // font-size: 14px;
-    // line-height: 1.15;
+    font-size: 14px;
+    line-height: 1.15;
     transition-property: color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4,0,0.2,1);
@@ -227,6 +228,10 @@
 }
 
 .header-site-nav__link--link-current {
+    @include device-type (mobile-only) {
+        color: var(--accent-color);
+        border-bottom: 0px solid var(--accent-color);
+    }
     color: var(--accent-color);
     border-bottom: 4px solid var(--accent-color);
 }

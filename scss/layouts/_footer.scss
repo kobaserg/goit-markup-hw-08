@@ -46,7 +46,8 @@
 
 .footer-сontact {
    
-    @include device-type (mobile-only) {
+    @include device-type (tablet-only) {
+        text-align: center;
         
     }
 }

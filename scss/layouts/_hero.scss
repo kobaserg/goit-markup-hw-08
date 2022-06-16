@@ -7,9 +7,6 @@
     min-width: 320px;
     max-width: 480px;  
 
-    padding-top: 118px;
-    padding-bottom: 198px;
-
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
     rgba(47, 48, 58, 0.4)), url(../../images/hero/hero-m.jpg);
 
@@ -24,8 +21,6 @@
     max-height: 400px;
     max-width: 1200px;
 
-    padding-top: 118px;
-    padding-bottom: 198px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),    
     rgba(47, 48, 58, 0.4)), url(../../images/hero/hero-t.jpg);
     @include device-type (retina) {
@@ -37,8 +32,7 @@
     background-size: cover;
     max-height: 600px;
     max-width: 1600px;
-    padding-top: 200px;
-    padding-bottom: 280px;
+    
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
     rgba(47, 48, 58, 0.4)), url(../../images/hero/hero-d.jpg);
     @include device-type (retina){
@@ -92,4 +86,14 @@
     text-align: center;
     margin-bottom: 30px;
 
+}
+
+.hero-position {
+    @include device-type (not-desktop) {
+        padding-top: 118px;
+        padding-bottom: 118px;
+    }
+
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
