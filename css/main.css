@@ -57,7 +57,6 @@ img {
 }
 
 .section {
-  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -629,6 +628,9 @@ h3 {
   .project-card:nth-child(2n) {
     margin-right: 0;
   }
+  .project-card:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -665,6 +667,10 @@ h3 {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 63px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
   color: var(--card-cl);
   position: absolute;
   width: 100%;
@@ -999,8 +1005,6 @@ h3 {
     font-size: 14px;
     line-height: 1.15;
     letter-spacing: 0.02em;
-    padding-top: 30px;
-    padding-bottom: 30px;
   }
 }
 
@@ -1024,6 +1028,29 @@ h3 {
         -ms-flex-pack: baseline;
             justify-content: baseline;
   }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-contact__list {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.header-contact__list:hover .header-contact__link-email,
+.header-contact__list:focus .header-contact__link-email {
+  cursor: pointer;
+  color: var(--accent-color);
+}
+
+.header-contact__list:hover .header-contact__link-tel,
+.header-contact__list:focus .header-contact__link-tel {
+  cursor: pointer;
+  color: var(--accent-color);
+}
+
+.header-contact__list:hover {
+  cursor: pointer;
 }
 
 .header-contact__link-email {
@@ -1059,7 +1086,7 @@ h3 {
   }
 }
 
-.header-contact__link-email:hover {
+.header-contact__link-email:hover, .header-contact__link-email:focus {
   cursor: pointer;
   color: var(--accent-color);
 }
@@ -1088,7 +1115,7 @@ h3 {
   }
 }
 
-.header-contact__link-tel:hover {
+.header-contact__link-tel:hover, .header-contact__link-tel:focus {
   cursor: pointer;
   color: var(--accent-color);
 }
@@ -1444,7 +1471,7 @@ h3 {
 /* Наша команда */
 .team {
   background-color: var(--secondary-bgc);
-  max-width: 1200px;
+  width: 100%;
 }
 
 .team__title {
@@ -1502,6 +1529,9 @@ h3 {
   .team__card:nth-child(2n) {
     margin-right: 0;
   }
+  .team__card:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1537,8 +1567,8 @@ h3 {
 /* Постоянные клиенты */
 .clients {
   font-weight: 700;
+  font-size: 28px;
   line-height: 1.17;
-  font-size: 24px;
   margin-bottom: 30px;
   text-align: center;
   letter-spacing: 0.03em;
