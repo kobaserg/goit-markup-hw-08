@@ -8,11 +8,11 @@
     max-width: 480px;  
 
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)), url(../../images/hero/hero-m.jpg);
+    rgba(47, 48, 58, 0.4)), url(../images/hero/hero-m.jpg);
 
     @include device-type (retina) {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)), url(../../images/hero/hero-m@2x.jpg);
+    rgba(47, 48, 58, 0.4)), url(../images/hero/hero-m@2x.jpg);
         }
     }
 
@@ -22,10 +22,10 @@
     max-width: 1200px;
 
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),    
-    rgba(47, 48, 58, 0.4)), url(../../images/hero/hero-t.jpg);
+    rgba(47, 48, 58, 0.4)), url(../images/hero/hero-t.jpg);
     @include device-type (retina) {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)), url(../../images/hero/hero-t@2x.jpg);
+    rgba(47, 48, 58, 0.4)), url(../images/hero/hero-t@2x.jpg);
     }
 }
     @include device-type (desktop) {
@@ -34,10 +34,10 @@
     max-width: 1600px;
     
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)), url(../../images/hero/hero-d.jpg);
+    rgba(47, 48, 58, 0.4)), url(../images/hero/hero-d.jpg);
     @include device-type (retina){
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)), url(../../images/hero/hero-d@2x.jpg);
+    rgba(47, 48, 58, 0.4)), url(../images/hero/hero-d@2x.jpg);
     
     }
 }
